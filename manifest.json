@@ -1,0 +1,26 @@
+{
+ "manifest_version": 2,
+ "name": "Facebook Unfriend Macro - FreeAngel",
+ "description": "facebook unfriend macro",
+ "version": "1.0",
+ "browser_action": {
+    "default_title": "facebook unfriend macro - FreeAngel",
+    "default_popup": "popup.html"
+ }, 
+   "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+  "permissions": [
+    "background",
+    "storage",
+    "https://*.facebook.com/*"
+  ],	
+"content_scripts": [
+ {
+ "matches": ["https://*.facebook.com/*"],
+ "js": ["unfollow.js"]
+ }
+ ]
+}
